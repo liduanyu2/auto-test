@@ -43,6 +43,7 @@ def run_main():
     get_element_id("SubmitBt").click()
 
     locator=(By.CLASS_NAME,"cboxIframe")#获取frame对象
+    print(locator)
     if WebDriverWait(driver,3).until(EC.presence_of_element_located(locator)):
         driver.switch_to_frame(get_element_xpath("//*[@id=\"cboxLoadedContent\"]/iframe"))#跳转
         driver.find_element_by_xpath("/html/body/div[1]/div[1]/a").click()
