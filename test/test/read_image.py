@@ -23,6 +23,7 @@ class UserLogin(object):
         time.sleep(1)
         return
     #输入用户信息
-    def send_user_info(self):
+    #def send_user_info(self):
 
-    def get_user_element(self):
+    #def get_user_element(self):
+

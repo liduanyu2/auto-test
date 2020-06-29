@@ -4,6 +4,7 @@ from selenium import webdriver #webdriver
 from selenium.webdriver.support import expected_conditions as EC #检测元素可见
 from selenium.webdriver.support.wait import WebDriverWait #持续操作时间
 from selenium.webdriver.common.by import By #捕获元素
+from test.test.login_function import login_function
 
 driver = webdriver.Chrome()
 user_name = "2076793"
@@ -51,5 +52,5 @@ def run_main():
     else:
         print ("没找到修改密码弹窗")
 
-
-run_main()
+#run_main()
+login_function("http://hcloud.bszhihui.com").main()
