@@ -6,6 +6,11 @@ from selenium.webdriver.support.wait import WebDriverWait #持续操作时间
 from selenium.webdriver.common.by import By #捕获元素
 from test.test.login_function import login_function
 from test.case.login_case import LoginCase
+from test.base.set_frame import SetFrame
+from test.case.login_case import LoginCase
+from test.page.login_page import LoginPage
+from test.handle.login_handle import LoginHandle
+from test.base.find_element import FindElement
 
 # driver = webdriver.Chrome()
 # user_name = "2071669"
@@ -43,16 +48,19 @@ from test.case.login_case import LoginCase
 #     get_element_id("userName").send_keys(user_name)
 #     get_element_id("passWord").send_keys(pass_word)
 #     get_element_id("SubmitBt").click()
-
-
-    # locator=(By.CLASS_NAME,"cboxIframe")#获取frame对象
-    # print(locator)
-    # if WebDriverWait(driver,3).until(EC.presence_of_element_located(locator)):
-    #     driver.switch_to_frame(get_element_xpath("//*[@id=\"cboxLoadedContent\"]/iframe"))#跳转
-    #     driver.find_element_by_xpath("/html/body/div[1]/div[1]/a").click()
-    #     print("找到了")
-    # else:
-    #     print ("没找到修改密码弹窗")
-
-#run_main()
+#
+#     time.sleep(1)
+#     if FindElement(driver).get_element("frame")!=None:
+#         driver.switch_to_frame(get_element_xpath("//*[@id=\"cboxLoadedContent\"]/iframe"))#跳转
+#         driver.find_element_by_xpath("/html/body/div[1]/div[1]/a").click()
+#         print("找到了")
+#     else:
+#         print ("没找到修改密码弹窗")
+#
+# run_main()
 # login_function("http://hcloud.bszhihui.com").main()
+
+driver = webdriver.Chrome()
+driver.get("http://hcloud.bszhihui.com")
+driver.maximize_window()
+LoginCase(driver).login()

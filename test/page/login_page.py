@@ -10,5 +10,14 @@ class LoginPage(object):
     def get_password_element(self):
         return self.fe.get_element("passWord")
 
+    def get_login_frame(self):
+        return self.fe.get_element("frame")
+
     def get_login_button_element(self):
         return self.fe.get_element("login_bt")
+
+    def get_login_summit_element(self):
+        return self.fe.get_element("login_summit_bt")
+
+    def get_code_element(self):
+        return self.fe.get_element("code")

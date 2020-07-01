@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC #检测元素�
 from selenium.webdriver.support.wait import WebDriverWait #持续操作时间
 from selenium.webdriver.common.by import By #捕获元素
 from test.base.find_element import FindElement
+
 class login_function(object):
     def __init__(self,url):
         self.driver=self.get_driver(url)
@@ -46,6 +47,7 @@ class login_function(object):
             print("找到了")
         else:
             print("没找到修改密码弹窗")
+
 
 if __name__=="__main__":
     login_function("http://hcloud.bszhihui.com").main()
