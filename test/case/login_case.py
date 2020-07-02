@@ -8,7 +8,7 @@ class LoginCase(object):
 
     def login(self):
         for i in range(0,4):
-            self.login_b.login_base("2076793","111333","11")
+            self.login_b.login_base("2076793","111333")
             time.sleep(2)
             self.d1.refresh()
 

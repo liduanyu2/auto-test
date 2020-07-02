@@ -16,13 +16,12 @@ class LoginBusiness(object):
         self.login_h.input_username(username)
         self.login_h.input_password(password)
         time.sleep(1)
-        if LoginPage(self.d1).get_code_element() != None:
+        if LoginPage(self.d1).get_code_element().is_displayed() != False:
             if code==None:
-                self.code1=ReadImage.read_code()
+                self.code1=ReadImage().read_code(self.d1)
                 self.login_h.input_code(self.code1)
             else:
                 self.login_h.input_code(code)
         else:
             pass
         self.login_h.click_login_summit_button()
-
