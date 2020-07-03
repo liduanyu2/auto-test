@@ -7,8 +7,6 @@ class LoginCase(object):
         self.d1=driver
 
     def login(self):
-        for i in range(0,4):
-            self.login_b.login_base("2076793","111333")
-            time.sleep(2)
-            self.d1.refresh()
+        self.login_b.login_base("2071669","111111")
+        time.sleep(2)
 
