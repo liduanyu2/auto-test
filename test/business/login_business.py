@@ -29,6 +29,5 @@ class LoginBusiness(object):
         if LoginPage(self.d1).get_login_frame() !=None:
             self.login_h.to_login_frame()#跳转
             self.d1.find_element_by_xpath("/html/body/div[1]/div[1]/a").click()
-            print("找到了")
         else:
-            print ("没找到修改密码弹窗")
+            pass

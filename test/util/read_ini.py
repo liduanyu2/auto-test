@@ -11,7 +11,7 @@ class ReadIni(object):
 
     def load_ini(self,file_name):
         conf=configparser.ConfigParser()
-        conf.read(file_name)
+        conf.read(file_name,"utf-8")
         return conf
 
     def get_value(self,key):
