@@ -22,5 +22,5 @@ class LoginHandle(object):
     def to_login_frame(self):
         SetFrame(self.frame).to_frame("frame")
 
-    def click_login_summit_button(self):
-        self.login_p.get_login_summit_element().click()
+    def click_login_submit_button(self):
+        self.login_p.get_login_submit_element().click()

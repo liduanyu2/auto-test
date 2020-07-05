@@ -24,7 +24,7 @@ class LoginBusiness(object):
                 self.login_h.input_code(code)
         else:
             pass
-        self.login_h.click_login_summit_button()
+        self.login_h.click_login_submit_button()
         time.sleep(1)
         if LoginPage(self.d1).get_login_frame() !=None:
             self.login_h.to_login_frame()#跳转
