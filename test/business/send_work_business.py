@@ -25,15 +25,16 @@ class SendWorkBusiness(object):
         self.swh.to_work_frame()
 
     #跳转到frame中
-    def to_frame(self):
-        self.swh.to_frame()
+    def to_copy_frame(self):
+        self.swh.to_copy_frame()
 
     #分享备课给王历
     def copy_work_to_wangli(self):
         self.swh.to_work_frame()
         self.swh.click_copy_work_button()
         time.sleep(1)
-        self.swh.to_frame()
+        self.swh.quit_frame()
+        self.swh.to_copy_frame()
         time.sleep(1)
         self.swh.click_wangli_button()
         self.swh.click_get_copy_submit_button()

@@ -19,6 +19,7 @@ class SendWorkPage(object):
 
     #王历选择框
     def get_wangli_element(self):
+        print(self.fe.get_element("wangli"))
         return self.fe.get_element("wangli")
 
     #作业列表frame

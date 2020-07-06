@@ -7,3 +7,6 @@ class SetFrame(object):
 
     def to_frame(self,key):
         self.sf.switch_to.frame(FindElement(self.sf).get_element(key))
+
+    def quit_frame(self):
+        self.sf.switch_to_default_content()

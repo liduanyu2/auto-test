@@ -19,15 +19,20 @@ class SendWorkHandle(object):
     def click_copy_work_button(self):
         self.swp.get_copy_work_button_element().click()
 
+    #跳转到被俄刻frame
     def to_work_frame(self):
         self.frame.to_frame("work_frame")
 
     #跳转到frame
-    def to_frame(self):
-        self.frame.to_frame("frame")
+    def to_copy_frame(self):
+        self.frame.to_frame("copy_frame")
+
+    def quit_frame(self):
+        self.frame.quit_frame()
 
     #点击王历选择框
     def click_wangli_button(self):
+        print(self.swp.get_wangli_element())
         self.swp.get_wangli_element().click()
 
     #点击确定分享
