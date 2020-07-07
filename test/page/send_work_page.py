@@ -18,8 +18,7 @@ class SendWorkPage(object):
         return self.fe.get_element("copy_work_bt")
 
     #王历选择框
-    def get_wangli_element(self):
-        print(self.fe.get_element("wangli"))
+    def get_wangli_checkbox(self):
         return self.fe.get_element("wangli")
 
     #作业列表frame

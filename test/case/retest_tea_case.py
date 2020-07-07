@@ -21,9 +21,11 @@ class ReTestTea(unittest.TestCase):
     def tearDown(self):
         time.sleep(1)
 
+    #登录
     def test_login(self):
         LoginBusiness(self.driver).login_base("2071669","111111")
 
+    #分享备课
     def test_send_work(self):
         SendWorkBusiness(self.driver).go_my_work()
         SendWorkBusiness(self.driver).copy_work_to_wangli()

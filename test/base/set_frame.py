@@ -9,4 +9,4 @@ class SetFrame(object):
         self.sf.switch_to.frame(FindElement(self.sf).get_element(key))
 
     def quit_frame(self):
-        self.sf.switch_to_default_content()
+        self.sf.switch_to.default_content()

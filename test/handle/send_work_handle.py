@@ -31,9 +31,8 @@ class SendWorkHandle(object):
         self.frame.quit_frame()
 
     #点击王历选择框
-    def click_wangli_button(self):
-        print(self.swp.get_wangli_element())
-        self.swp.get_wangli_element().click()
+    def click_wangli_checkbox(self):
+        self.swp.get_wangli_checkbox().click()
 
     #点击确定分享
     def click_get_copy_submit_button(self):
