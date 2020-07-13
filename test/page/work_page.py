@@ -1,7 +1,7 @@
 #coding=utf-8
 from test.base.find_element import FindElement
 
-class SendWorkPage(object):
+class WorkPage(object):
     def __init__(self,driver):
         self.fe=FindElement(driver)
 
@@ -34,4 +34,7 @@ class SendWorkPage(object):
         return self.fe.get_element("copy_submit_bt")
 
     #消息通知按钮
-    def get
+    def get_message_button(self):
+        return self.fe.get_element("get_copy_bt")
+
+    #

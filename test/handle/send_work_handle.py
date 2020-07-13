@@ -1,10 +1,10 @@
 #coding=utf-8
-from test.page.send_work_page import SendWorkPage
+from test.page.work_page import WorkPage
 from test.base.set_frame import SetFrame
 
 class SendWorkHandle(object):
     def __init__(self,driver):
-        self.swp=SendWorkPage(driver)
+        self.swp=WorkPage(driver)
         self.frame=SetFrame(driver)
 
     #点击备课
@@ -37,3 +37,7 @@ class SendWorkHandle(object):
     #点击确定分享
     def click_get_copy_submit_button(self):
         self.swp.get_copy_submit_button_element().click()
+
+    #点击消息通知按钮
+    def click_message_button(self):
+        self.swp.get_message_button().click()

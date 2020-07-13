@@ -1,7 +1,7 @@
 #coding=utf-8
 from test.handle.send_work_handle import SendWorkHandle
 import time
-from test.page.send_work_page import SendWorkPage
+from test.page.work_page import WorkPage
 
 class SendWorkBusiness(object):
     def __init__(self,driver):
@@ -38,10 +38,11 @@ class SendWorkBusiness(object):
         self.swh.quit_frame()
         self.swh.to_copy_frame()
         time.sleep(1)
-        if SendWorkPage(self.d1).get_wangli_checkbox().is_selected() != True:
+        if WorkPage(self.d1).get_wangli_checkbox().is_selected() != True:
             self.swh.click_wangli_checkbox()
         self.swh.click_get_copy_submit_button()
 
     #接受备课分享
     def get_copy_work(self):
-        pass
+        time.sleep(1)
+        self.swh.click_message_button()

@@ -25,7 +25,8 @@ class LoginBusiness(object):
         else:
             pass
         self.login_h.click_login_submit_button()
-        time.sleep(1)
+        time.sleep(2)
+        print(LoginPage(self.d1).get_login_frame())
         if LoginPage(self.d1).get_login_frame() !=None:
             self.login_h.to_login_frame()#跳转
             self.d1.find_element_by_xpath("/html/body/div[1]/div[1]/a").click()
