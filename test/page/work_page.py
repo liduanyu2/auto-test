@@ -32,3 +32,6 @@ class SendWorkPage(object):
     #确定分享按钮
     def get_copy_submit_button_element(self):
         return self.fe.get_element("copy_submit_bt")
+
+    #消息通知按钮
+    def get
