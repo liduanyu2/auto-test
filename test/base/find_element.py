@@ -20,4 +20,5 @@ class FindElement(object):
             elif by=="xpath":
                 return self.driver.find_element_by_xpath(value)
         except:
+            print("\n"+key+" is dead")
             return None

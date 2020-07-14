@@ -27,8 +27,8 @@ class SendWorkBusiness(object):
         self.swh.to_work_frame()
 
     #跳转到frame中
-    def to_copy_frame(self):
-        self.swh.to_copy_frame()
+    def to_frame(self):
+        self.swh.to_frame()
 
     #分享备课给王历
     def copy_work_to_wangli(self):
@@ -36,13 +36,40 @@ class SendWorkBusiness(object):
         self.swh.click_copy_work_button()
         time.sleep(1)
         self.swh.quit_frame()
-        self.swh.to_copy_frame()
+        self.swh.to_frame()
         time.sleep(1)
-        if WorkPage(self.d1).get_wangli_checkbox().is_selected() != True:
+        if WorkPage(self.d1).get_wangli_checkbox().is_selected() != True:  #判断checkbox是否被勾选
             self.swh.click_wangli_checkbox()
         self.swh.click_get_copy_submit_button()
 
     #接受备课分享
     def get_copy_work(self):
-        time.sleep(1)
         self.swh.click_message_button()
+        time.sleep(1)
+        self.swh.to_frame()
+        self.swh.click_get_copy_work_submit_button()
+        self.swh.click_close_message_button()
+
+    #发布课前课后作业
+    def release_keqian_work(self):
+        self.swh.click_my_work_button()
+        time.sleep(1)
+        #课前
+        self.to_work_frame()
+        self.swh.click_release_keqian_button()
+        time.sleep(1)
+        self.swh.quit_frame()
+        self.swh.to_frame()
+        self.swh.click_release_submit_button()
+        time.sleep(1)
+        # 课后
+        self.swh.quit_frame()
+        self.to_work_frame()
+        self.swh.click_release_kehou_button()
+        time.sleep(1)
+        self.swh.quit_frame()
+        self.swh.to_frame()
+        self.swh.click_release_submit_button()
+
+# if __name__=="__main__":
+#     pass
