@@ -61,15 +61,17 @@ class SendWorkBusiness(object):
         self.swh.quit_frame()
         self.swh.to_frame()
         self.swh.click_release_submit_button()
-        time.sleep(1)
-        # 课后
+        time.sleep(12) #如果发布班级人多的话就多等会
         self.swh.quit_frame()
+        # 课后
+        time.sleep(1)
         self.to_work_frame()
         self.swh.click_release_kehou_button()
         time.sleep(1)
         self.swh.quit_frame()
         self.swh.to_frame()
         self.swh.click_release_submit_button()
+        time.sleep(12) #如果发布班级人多的话就多等会
 
 # if __name__=="__main__":
 #     pass

@@ -5,10 +5,7 @@ class WorkPage(object):
     def __init__(self,driver):
         self.fe=FindElement(driver)
 
-    #备课按钮
-    def get_work_button(self):
-        return self.fe.get_element("work_bt")
-
+    #老师
     #我的备课按钮
     def get_my_work_button(self):
         return self.fe.get_element("my_work_bt")
@@ -56,3 +53,5 @@ class WorkPage(object):
     #确认发布按钮
     def get_release_submit_button(self):
         return self.fe.get_element("release_submit_bt")
+
+    #学生

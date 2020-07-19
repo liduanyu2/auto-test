@@ -1,15 +1,17 @@
 #coding=utf-8
 from test.page.work_page import WorkPage
 from test.base.set_frame import SetFrame
+from test.page.index_page import IndexPage
 
 class SendWorkHandle(object):
     def __init__(self,driver):
         self.wp=WorkPage(driver)
+        self.ip=IndexPage(driver)
         self.frame=SetFrame(driver)
 
     #点击备课
     def click_work_button(self):
-        self.wp.get_work_button().click()
+        self.ip.get_work_button().click()
 
     #点击我的备课
     def click_my_work_button(self):
