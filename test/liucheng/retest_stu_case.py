@@ -12,7 +12,8 @@ class ReTestStu(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.driver = webdriver.Chrome()  # .create_options("--user-data-dir="+os.getenv("USERPROFILE")+"/AppData/Local/Google/Chrome/User Data/Default")
+        dirver_path=("F:\zhaifei\python\Scripts")
+        self.driver = webdriver.Chrome(dirver_path)  # .create_options("--user-data-dir="+os.getenv("USERPROFILE")+"/AppData/Local/Google/Chrome/User Data/Default")
         self.driver.maximize_window()
         self.driver.get("http://uat-hcloud.bszhihui.com")
         time.sleep(1)

@@ -1,4 +1,6 @@
 #coding=utf-8
+import sys
+sys.path.extend(['C:\\Users\\Administrator\\Desktop\\auto-test', 'C:/Users/Administrator/Desktop/auto-test'])
 import unittest
 from selenium import webdriver
 from test.business.login_business import LoginBusiness
@@ -6,10 +8,6 @@ from test.business.send_work_business import SendWorkBusiness
 
 from test.page.work_page import WorkPage
 import os
-import sys
-directory = os.path.dirname(os.path.abspath(__file__))
-root_path = os.path.abspath(os.path.dirname(os.path.dirname(directory))+ os.path.sep + ".")
-sys.path.append(root_path)
 import time
 
 
